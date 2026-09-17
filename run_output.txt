@@ -1,33 +1,53 @@
 loaded 65037 rows from 24 public corpora (ComplexityMT has no loadable data files)
 distinct schemas across 24 corpora: 1
+  8 fields: category, cefr_level, format, lang, license, source_name, text, title
+rows with empty or missing text: 0
 rows whose lang disagrees with the corpus name: 0
 
 --- redundancy within each corpus ---
-corpus                    rows  unique      x  conflicting-level texts
-elg_cefr_nl               3596    1195  3.01x    1126
-cople2_pt                  942     471  2.00x     471
-caes_es                  31149   20629  1.51x      69
-hablacultura_es            713     667  1.07x       1
-cambridge_exams_en         331     325  1.02x       0
-cefr_asag_en               299     296  1.01x       1
-elg_cefr_en                712     706  1.01x       0
-readme_ru                 1758    1751  1.00x       4
-readme_hi                 1491    1486  1.00x       2
-readme_ar                 1945    1939  1.00x       3
-learn_welsh_cy            1372    1368  1.00x       2
-readme_en                 2822    2820  1.00x       1
-readme_fr                 1669    1668  1.00x       0
-elle_et                   1697    1696  1.00x       0
-cefr_sp_en               10004   10003  1.00x       0
+corpus                    rows  unique  dup rows      x  conflicting-level texts
+elg_cefr_nl               3596    1195      2401  3.01x    1126
+cople2_pt                  942     471       471  2.00x     471
+caes_es                  31149   20629     10520  1.51x      69
+hablacultura_es            713     667        46  1.07x       1
+cambridge_exams_en         331     325         6  1.02x       0
+cefr_asag_en               299     296         3  1.01x       1
+elg_cefr_en                712     706         6  1.01x       0
+readme_ru                 1758    1751         7  1.00x       4
+readme_hi                 1491    1486         5  1.00x       2
+readme_ar                 1945    1939         6  1.00x       3
+learn_welsh_cy            1372    1368         4  1.00x       2
+readme_en                 2822    2820         2  1.00x       1
+readme_fr                 1669    1668         1  1.00x       0
+elle_et                   1697    1696         1  1.00x       0
+cefr_sp_en               10004   10003         1  1.00x       0
 
 collection: 65037 rows, 51426 unique texts, 13611 rows duplicate another row
+  of those, 13480 duplicate within a corpus and 131 across corpora
+  largest single contributor: caes_es with 10520 rows (77% of the total)
+  corpora holding at least one text with more than one level: 10
 
 --- cople2_pt: level tuples per unique text ---
+  multiplicity (how many rows per unique text): {2: 471}
+  unique texts: 471; carrying more than one level: 471
   ('A1', 'A2')  x236
   ('B1', 'B2')  x163
   ('C1', 'C2')  x72
 
+--- cople2_pt: fields that differ between repeated rows ---
+  471 texts appear more than once
+    title          differs in     0 of them
+    lang           differs in     0 of them
+    source_name    differs in     0 of them
+    format         differs in     0 of them
+    category       differs in     0 of them
+    cefr_level     differs in   471 of them
+    license        differs in     0 of them
+    text           differs in     0 of them
+
 --- elg_cefr_nl: level tuples per unique text ---
+  multiplicity (how many rows per unique text): {2: 1, 3: 1190, 6: 4}
+  unique texts: 1195; carrying more than one level: 1126
   ('B1', 'B1+', 'B2')  x73
   ('B1', 'B1+', 'B1+')  x47
   ('B1', 'B1', 'B1+')  x46
@@ -38,10 +58,90 @@ collection: 65037 rows, 51426 unique texts, 13611 rows duplicate another row
   ('B1', 'B1+', 'B2+')  x34
   ... 142 distinct tuples
 
+--- elg_cefr_nl: fields that differ between repeated rows ---
+  1195 texts appear more than once
+    title          differs in     2 of them
+    lang           differs in     0 of them
+    source_name    differs in     0 of them
+    format         differs in     0 of them
+    category       differs in     0 of them
+    cefr_level     differs in  1126 of them
+    license        differs in     0 of them
+    text           differs in     1 of them
+
+--- cefr_level inventory ---
+  17 distinct level strings collection-wide
+  the six CEFR bands: ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']
+  sub-band '+' levels: ['A1+', 'A2+', 'B1+', 'B2+', 'C1+', 'C2+']
+    elg_cefr_en            ['A1+', 'A2+', 'B1+', 'B2+']
+    elg_cefr_nl            ['A1+', 'A2+', 'B1+', 'B2+', 'C1+', 'C2+']
+    icle500_en             ['B1+', 'B2+']
+  outside the CEFR scheme: ['B', 'EMPTY', 'NA', 'Unassessable', 'unrated']
+    hablacultura_es        ['B']
+    icle500_en             ['NA']
+    merlin_cs              ['EMPTY']
+    merlin_it              ['EMPTY', 'unrated']
+    zaebuc_ar              ['Unassessable']
+
+--- cross-corpus exact duplicates (exhaustive) ---
+  texts present in more than one corpus: 131
+       130  cambridge_exams_en <-> elg_cefr_en
+         1  caes_es <-> readme_en
+  of those, carrying different levels in different corpora: 0
+  1 of the shared texts are under 80 characters (degenerate rather than genuine overlap):
+    '!'                  in ['caes_es', 'readme_en']
+
 --- cross-corpus overlap (5-gram Jaccard >= 0.5) ---
+  coverage: 10853 of 65037 rows (16.7%) are under 80 characters and are not swept
+  compared: 6 of 13 languages hold more than one corpus (ar, de, en, es, fr, pt)
+  not tested: 7 languages hold a single corpus, so cross-corpus overlap is impossible there by construction — merlin_cs (cs), learn_welsh_cy (cy), elle_et (et), readme_hi (hi), merlin_it (it), elg_cefr_nl (nl), readme_ru (ru)
+  sensitivity: K=64, 16 bands of 4; a true pair at Jaccard 0.5 surfaces with probability 0.64, at 0.7 with 0.99. Counts below are a lower bound.
     328 near-duplicate pairs  cambridge_exams_en <-> elg_cefr_en
 
 --- containment: cambridge_exams_en in elg_cefr_en ---
   cambridge_exams_en: 325 unique texts; elg_cefr_en: 706 unique texts
   with a near-duplicate in elg_cefr_en: 324 = 99.7%
   label agreement on those: 324/324 = 100.0%
+  identical after whitespace/case normalisation: 130
+  distinct elg_cefr_en texts matched: 324  (one-to-one)
+  similarity of the matches: min 0.55, median 0.97
+    identical     130
+    0.9-1.0        98
+    0.7-0.9        80
+    0.5-0.7        16
+
+--- short and placeholder rows (under 20 characters) ---
+  caes_es                   310 rows
+  learn_welsh_cy            223 rows
+  readme_en                  43 rows
+  cefr_sp_en                 30 rows
+  readme_ar                  23 rows
+  readme_hi                  18 rows
+  cefr_asag_en               14 rows
+  readme_fr                   8 rows
+  readme_ru                   4 rows
+  most repeated short strings, with the levels they carry:
+    caes_es          'none'       x 214  {'A2': 123, 'A1': 60, 'B1': 17, 'C1': 11, 'B2': 3}
+    caes_es          '!'          x  15  {'A1': 15}
+    caes_es          'hola'       x   8  {'A2': 6, 'A1': 2}
+    caes_es          '¡ hasta luego !' x   8  {'A1': 8}
+    caes_es          'buenas tardes adios' x   7  {'A1': 7}
+
+--- parquet file count per dataset ---
+  all 24 datasets checked expose exactly one parquet file; reading train/0.parquet reads all of it
+
+--- row `license` field vs dataset card ---
+  cople2_pt              rows 'CC BY-SA-NC 4.0' != card 'cc-by-nc-sa-4.0'
+  peapl2_pt              rows 'CC BY SA NC 4.0' != card 'cc-by-nc-sa-4.0'
+  readme_en              rows 'CC BY SA NC 4.0' != card 'cc-by-nc-sa-4.0'
+  readme_fr              rows 'CC BY SA NC 4.0' != card 'cc-by-nc-sa-4.0'
+  readme_ru              rows 'CC BY SA NC 4.0' != card 'cc-by-nc-sa-4.0'
+  readme_ar              rows 'CC BY SA NC 4.0' != card 'cc-by-nc-sa-4.0'
+  readme_hi              rows 'CC BY SA NC 4.0' != card 'cc-by-nc-sa-4.0'
+  elg_cefr_de            rows 'CC BY-NC-SA 4.0' != card 'cc-by-nc-4.0'
+  elg_cefr_en            rows 'CC BY-NC-SA 4.0' != card 'cc-by-nc-4.0'
+  elg_cefr_nl            rows 'CC BY-NC-SA 4.0' != card 'cc-by-nc-4.0'
+  icle500_en             rows 'CC0 1.0 (Public Domain)' != card 'cc-by-nc-4.0'
+  learn_welsh_cy         rows 'public' != card 'cc-by-nc-sa-4.0'
+  zaebuc_ar              rows 'CC BY-SA 4.0' != card 'cc-by-nc-sa-4.0'
+  13 of the 24 corpora actually checked disagree with their own card
