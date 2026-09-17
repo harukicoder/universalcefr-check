@@ -1,0 +1,27 @@
+{
+  "title": "universalcefr-check: a provenance and redundancy check over the public UniversalCEFR collection",
+  "upload_type": "software",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "Serrano, Alvaro",
+      "orcid": "0009-0006-4701-9026"
+    }
+  ],
+  "keywords": [
+    "CEFR",
+    "language proficiency",
+    "dataset provenance",
+    "data quality",
+    "readability assessment",
+    "duplicate detection"
+  ],
+  "description": "<p>Applies a declare-then-test provenance check to the 24 public corpora of the UniversalCEFR collection: 13 languages, 65,037 rows. The method is to find the source a dataset declares, then test the data against that declaration rather than trusting it.</p><p>Most of the collection is clean: one schema across all 24 corpora, the language field correct on every row, and no cross-corpus overlap anywhere in thirteen languages - with one exception. <code>cambridge_exams_en</code> is 99.7% contained in <code>elg_cefr_en</code> (324 of 325 texts, labels agreeing on 324 of 324) while the two declare different repositories, different papers and different licences, so agreement between them is not corroboration.</p><p>Three corpora repeat their own texts under conflicting CEFR levels: <code>cople2_pt</code> (471 texts each present twice, as A1/A2, B1/B2, C1/C2), <code>elg_cefr_nl</code> (1,195 texts stored as 3,596 rows), and <code>caes_es</code> (the placeholder string &quot;none&quot; 214 times across five levels). One listed dataset, <code>ComplexityMT</code>, has no data files. Collection-wide, 13,611 of 65,037 rows duplicate another row, so a random split leaks.</p><p>What the check cannot determine from outside is whether any of this originates upstream or in the conversion to the UniversalCEFR format; the two produce identical output. Fully reproducible in one command, roughly four minutes. Redistributes no data - the script downloads the published exports, and each corpus keeps its own licence.</p>",
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.22540154",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint"
+    }
+  ]
+}
