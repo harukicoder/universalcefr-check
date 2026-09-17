@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+title: "universalcefr-check: a provenance and redundancy check over the public UniversalCEFR collection"
+message: "If you use this software or its findings, please cite it."
+type: software
+authors:
+  - given-names: Alvaro
+    family-names: Serrano
+    orcid: "https://orcid.org/0009-0006-4701-9026"
+repository-code: "https://github.com/harukicoder/universalcefr-check"
+license: MIT
+version: 1.0.0
+date-released: "2026-09-17"
+keywords:
+  - CEFR
+  - language proficiency
+  - dataset provenance
+  - data quality
+  - readability
+abstract: >-
+  Applies a declare-then-test provenance check to the 24 public corpora of the
+  UniversalCEFR collection (13 languages, 65,037 rows). The schema is uniform
+  and there is no cross-corpus overlap anywhere except one pair: two entries
+  declaring different repositories, papers and licences share 99.7% of their
+  texts with 100% label agreement. Three corpora repeat their own texts under
+  conflicting CEFR levels. Fully reproducible; redistributes no data.

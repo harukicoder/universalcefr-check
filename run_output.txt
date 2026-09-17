@@ -1,0 +1,47 @@
+loaded 65037 rows from 24 public corpora (ComplexityMT has no loadable data files)
+distinct schemas across 24 corpora: 1
+rows whose lang disagrees with the corpus name: 0
+
+--- redundancy within each corpus ---
+corpus                    rows  unique      x  conflicting-level texts
+elg_cefr_nl               3596    1195  3.01x    1126
+cople2_pt                  942     471  2.00x     471
+caes_es                  31149   20629  1.51x      69
+hablacultura_es            713     667  1.07x       1
+cambridge_exams_en         331     325  1.02x       0
+cefr_asag_en               299     296  1.01x       1
+elg_cefr_en                712     706  1.01x       0
+readme_ru                 1758    1751  1.00x       4
+readme_hi                 1491    1486  1.00x       2
+readme_ar                 1945    1939  1.00x       3
+learn_welsh_cy            1372    1368  1.00x       2
+readme_en                 2822    2820  1.00x       1
+readme_fr                 1669    1668  1.00x       0
+elle_et                   1697    1696  1.00x       0
+cefr_sp_en               10004   10003  1.00x       0
+
+collection: 65037 rows, 51426 unique texts, 13611 rows duplicate another row
+
+--- cople2_pt: level tuples per unique text ---
+  ('A1', 'A2')  x236
+  ('B1', 'B2')  x163
+  ('C1', 'C2')  x72
+
+--- elg_cefr_nl: level tuples per unique text ---
+  ('B1', 'B1+', 'B2')  x73
+  ('B1', 'B1+', 'B1+')  x47
+  ('B1', 'B1', 'B1+')  x46
+  ('B1+', 'B2', 'B2')  x40
+  ('B1+', 'B2', 'B2+')  x36
+  ('B1', 'B2', 'B2')  x36
+  ('A2+', 'B1', 'B1+')  x35
+  ('B1', 'B1+', 'B2+')  x34
+  ... 142 distinct tuples
+
+--- cross-corpus overlap (5-gram Jaccard >= 0.5) ---
+    328 near-duplicate pairs  cambridge_exams_en <-> elg_cefr_en
+
+--- containment: cambridge_exams_en in elg_cefr_en ---
+  cambridge_exams_en: 325 unique texts; elg_cefr_en: 706 unique texts
+  with a near-duplicate in elg_cefr_en: 324 = 99.7%
+  label agreement on those: 324/324 = 100.0%
