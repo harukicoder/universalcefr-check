@@ -1,5 +1,8 @@
 # universalcefr-check
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22821029.svg)](https://doi.org/10.5281/zenodo.22821029)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 A provenance and redundancy check over the public
 [UniversalCEFR](https://huggingface.co/UniversalCEFR) collection — 24 corpora,
 13 languages, 65,037 rows.
@@ -43,3 +46,8 @@ The method is the one from
 where four of the five most used lists turned out to be one artifact circulating
 under four names: find what a dataset declares, then test the data against the
 declaration instead of trusting it.
+
+## Citing
+
+Archived at [doi:10.5281/zenodo.22821029](https://doi.org/10.5281/zenodo.22821029),
+which always resolves to the latest version. See `CITATION.cff`.

@@ -8,8 +8,16 @@ authors:
     orcid: "https://orcid.org/0009-0006-4701-9026"
 repository-code: "https://github.com/harukicoder/universalcefr-check"
 license: MIT
-version: 1.0.0
-date-released: "2026-09-17"
+version: 1.1.0
+date-released: "2026-09-18"
+doi: 10.5281/zenodo.22821029
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22821029
+    description: Concept DOI, resolving to the latest version
+  - type: doi
+    value: 10.5281/zenodo.22821030
+    description: DOI for version 1.1.0
 keywords:
   - CEFR
   - language proficiency
@@ -18,8 +26,11 @@ keywords:
   - readability
 abstract: >-
   Applies a declare-then-test provenance check to the 24 public corpora of the
-  UniversalCEFR collection (13 languages, 65,037 rows). The schema is uniform
-  and there is no cross-corpus overlap anywhere except one pair: two entries
-  declaring different repositories, papers and licences share 99.7% of their
-  texts with 100% label agreement. Three corpora repeat their own texts under
-  conflicting CEFR levels. Fully reproducible; redistributes no data.
+  UniversalCEFR collection (13 languages, 65,037 rows). The schema is uniform,
+  and an exhaustive inversion of every text finds no corpus sharing text with
+  another except one pair: two entries declaring different repositories, papers
+  and licences, where 130 texts are identical and 324 of 325 match one to one
+  with 100% label agreement. Two corpora repeat their own texts structurally
+  under conflicting CEFR levels, the label field holds 17 distinct strings, and
+  the row-level licence disagrees with the dataset card in 13 of 24 corpora.
+  Every published figure is printed by the script; redistributes no data.
