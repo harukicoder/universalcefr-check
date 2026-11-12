@@ -47,6 +47,15 @@ where four of the five most used lists turned out to be one artifact circulating
 under four names: find what a dataset declares, then test the data against the
 declaration instead of trusting it.
 
+## Proposed fixes, as code (v1.2.0)
+
+[`fixes/`](fixes/) turns the label and licence fixes from the observations
+document into code a conversion could run: a mapping of the 17 `cefr_level`
+strings onto the six bands (plus-levels, band-only labels and missing-label
+reasons in separate fields), a row check against each dataset card's licence,
+and a per-corpus count of the rows each proposed change touches. It proposes;
+it applies nothing. See [fixes/README.md](fixes/README.md).
+
 ## Citing
 
 Archived at [doi:10.5281/zenodo.22821029](https://doi.org/10.5281/zenodo.22821029),

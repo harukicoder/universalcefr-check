@@ -1,0 +1,102 @@
+UniversalCEFR proposed fixes: rows affected, 24 public corpora, 65,037 rows
+
+Label strings found and how they map:
+  'A1'            10,774  -> level=A1    sublevel=None  range=None   missing_reason=None
+  'A2'            14,560  -> level=A2    sublevel=None  range=None   missing_reason=None
+  'B1'            15,735  -> level=B1    sublevel=None  range=None   missing_reason=None
+  'B2'            13,252  -> level=B2    sublevel=None  range=None   missing_reason=None
+  'C1'             7,515  -> level=C1    sublevel=None  range=None   missing_reason=None
+  'C2'             1,338  -> level=C2    sublevel=None  range=None   missing_reason=None
+  'B'                 18  -> level=None  sublevel=None  range=B1-B2  missing_reason=None
+  'EMPTY'              3  -> level=None  sublevel=None  range=None   missing_reason=empty
+  'NA'                 7  -> level=None  sublevel=None  range=None   missing_reason=na
+  'Unassessable'       6  -> level=None  sublevel=None  range=None   missing_reason=unassessable
+  'unrated'            6  -> level=None  sublevel=None  range=None   missing_reason=unrated
+  'A1+'               61  -> level=A1    sublevel=A1+   range=None   missing_reason=None
+  'A2+'              347  -> level=A2    sublevel=A2+   range=None   missing_reason=None
+  'B1+'              841  -> level=B1    sublevel=B1+   range=None   missing_reason=None
+  'B2+'              458  -> level=B2    sublevel=B2+   range=None   missing_reason=None
+  'C1+'              102  -> level=C1    sublevel=C1+   range=None   missing_reason=None
+  'C2+'               14  -> level=C2    sublevel=C2+   range=None   missing_reason=None
+  (17 distinct strings)
+
+3.2  plus-level moved to cefr_sublevel (cefr_level keeps the band)
+  1,823 rows in 3 corpora:
+   elg_cefr_en 114, elg_cefr_nl 1,505, icle500_en 204
+
+3.2  bare band letter -> cefr_level null, cefr_range set
+  18 rows in 1 corpus:
+   hablacultura_es 18
+
+3.2  missing-label marker -> null, marker kept as reason
+  22 rows in 4 corpora:
+   merlin_cs 2, merlin_it 7, icle500_en 7, zaebuc_ar 6
+
+3.3  row licence: same terms, element order differs from card
+  11,108 rows in 7 corpora:
+   cople2_pt 942, peapl2_pt 481, readme_en 2,822, readme_fr 1,669, readme_ru 1,758, readme_ar 1,945, readme_hi 1,491
+
+3.3  row licence: different terms from card
+  5,527 rows in 5 corpora:
+   elg_cefr_de 509, elg_cefr_en 712, elg_cefr_nl 3,596, icle500_en 495, zaebuc_ar 215
+
+3.3  row licence: not a licence identifier
+  1,372 rows in 1 corpus:
+   learn_welsh_cy 1,372
+
+3.3  row licence string rewritten as an SPDX id
+  65,037 rows in 24 corpora:
+
+4.2  rows removed if each text kept once (cople2_pt)
+  471 rows in 1 corpus:
+   cople2_pt 471
+
+4.3  rows removed if each text kept once, ratings in a list (elg_cefr_nl)
+  2,401 rows in 1 corpus:
+   elg_cefr_nl 2,401
+
+4.4  rows whose text is the placeholder 'none' (caes_es)
+  214 rows in 1 corpus:
+   caes_es 214
+
+4.1  rows whose normalised text also occurs in another corpus
+  280 rows in 4 corpora:
+   caes_es 15, readme_en 1, elg_cefr_en 132, cambridge_exams_en 132
+
+Labels the mapping does not recognise: 0
+
+Per-corpus licence comparison (row value vs card):
+  caes_es              rows 'CC BY-NC 4.0'               card 'cc-by-nc-4.0'    
+  hablacultura_es      rows 'CC BY NC 4.0'               card 'cc-by-nc-4.0'    
+  kwiqiz_es            rows 'CC BY NC 4.0'               card 'cc-by-nc-4.0'    
+  cople2_pt            rows 'CC BY-SA-NC 4.0'            card 'cc-by-nc-sa-4.0'   <- word_order
+  peapl2_pt            rows 'CC BY SA NC 4.0'            card 'cc-by-nc-sa-4.0'   <- word_order
+  readme_en            rows 'CC BY SA NC 4.0'            card 'cc-by-nc-sa-4.0'   <- word_order
+  readme_fr            rows 'CC BY SA NC 4.0'            card 'cc-by-nc-sa-4.0'   <- word_order
+  readme_ru            rows 'CC BY SA NC 4.0'            card 'cc-by-nc-sa-4.0'   <- word_order
+  readme_ar            rows 'CC BY SA NC 4.0'            card 'cc-by-nc-sa-4.0'   <- word_order
+  readme_hi            rows 'CC BY SA NC 4.0'            card 'cc-by-nc-sa-4.0'   <- word_order
+  merlin_cs            rows 'CC BY-SA 4.0'               card 'cc-by-sa-4.0'    
+  merlin_de            rows 'CC BY-SA 4.0'               card 'cc-by-sa-4.0'    
+  merlin_it            rows 'CC BY-SA 4.0'               card 'cc-by-sa-4.0'    
+  elg_cefr_de          rows 'CC BY-NC-SA 4.0'            card 'cc-by-nc-4.0'      <- substantive
+  elg_cefr_en          rows 'CC BY-NC-SA 4.0'            card 'cc-by-nc-4.0'      <- substantive
+  elg_cefr_nl          rows 'CC BY-NC-SA 4.0'            card 'cc-by-nc-4.0'      <- substantive
+  elle_et              rows 'CC BY 4.0'                  card 'cc-by-4.0'       
+  icle500_en           rows 'CC0 1.0 (Public Domain)'    card 'cc-by-nc-4.0'      <- substantive
+  kwiqiz_fr            rows 'CC BY NC 4.0'               card 'cc-by-nc-4.0'    
+  learn_welsh_cy       rows 'public'                     card 'cc-by-nc-sa-4.0'   <- unparseable
+  cefr_sp_en           rows 'CC BY-NC-SA 4.0'            card 'cc-by-nc-sa-4.0' 
+  cefr_asag_en         rows 'CC BY-NC-SA 4.0'            card 'cc-by-nc-sa-4.0' 
+  cambridge_exams_en   rows 'CC BY-NC-SA 4.0'            card 'cc-by-nc-sa-4.0' 
+  zaebuc_ar            rows 'CC BY-SA 4.0'               card 'cc-by-nc-sa-4.0'   <- substantive
+  13 of 24 corpora differ from their card (7 word order only, 5 substantive, 1 not a licence id)
+
+check_row(): rows outside what the collection and the cards declare
+  label-outside-cefr           40 rows in 5 corpora
+  licence-substantive       5,527 rows in 5 corpora
+  licence-unparseable       1,372 rows in 1 corpora
+  licence-word_order       11,108 rows in 7 corpora
+  rows with at least one flag: 18,034 of 65,037
+
+wrote report.csv

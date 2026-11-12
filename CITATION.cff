@@ -8,8 +8,8 @@ authors:
     orcid: "https://orcid.org/0009-0006-4701-9026"
 repository-code: "https://github.com/harukicoder/universalcefr-check"
 license: MIT
-version: 1.1.0
-date-released: "2026-09-18"
+version: 1.2.0
+date-released: "2026-11-12"
 doi: 10.5281/zenodo.22821029
 identifiers:
   - type: doi

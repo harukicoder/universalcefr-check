@@ -1,0 +1,25 @@
+corpus,rows,distinct_texts,card_licence,card_sha,row_licence,label_plus_to_sublevel,label_band_only_to_range,label_missing_to_null,licence_word_order,licence_substantive,licence_unparseable,licence_to_spdx,collapse_band_expanded,collapse_rater_rows,placeholder_none,cross_corpus_exact,label_unrecognised
+caes_es,31149,20629,cc-by-nc-4.0,b2519a72c4,CC BY-NC 4.0,0,0,0,0,0,0,31149,0,0,214,15,0
+hablacultura_es,713,667,cc-by-nc-4.0,14738d1699,CC BY NC 4.0,0,18,0,0,0,0,713,0,0,0,0,0
+kwiqiz_es,206,206,cc-by-nc-4.0,8c40d064a9,CC BY NC 4.0,0,0,0,0,0,0,206,0,0,0,0,0
+cople2_pt,942,471,cc-by-nc-sa-4.0,bb50e5b406,CC BY-SA-NC 4.0,0,0,0,942,0,0,942,471,0,0,0,0
+peapl2_pt,481,481,cc-by-nc-sa-4.0,2d9646ca50,CC BY SA NC 4.0,0,0,0,481,0,0,481,0,0,0,0,0
+readme_en,2822,2820,cc-by-nc-sa-4.0,88ce5b3736,CC BY SA NC 4.0,0,0,0,2822,0,0,2822,0,0,0,1,0
+readme_fr,1669,1668,cc-by-nc-sa-4.0,f679252e36,CC BY SA NC 4.0,0,0,0,1669,0,0,1669,0,0,0,0,0
+readme_ru,1758,1751,cc-by-nc-sa-4.0,65521465a5,CC BY SA NC 4.0,0,0,0,1758,0,0,1758,0,0,0,0,0
+readme_ar,1945,1939,cc-by-nc-sa-4.0,d7c384288c,CC BY SA NC 4.0,0,0,0,1945,0,0,1945,0,0,0,0,0
+readme_hi,1491,1486,cc-by-nc-sa-4.0,46468d69d8,CC BY SA NC 4.0,0,0,0,1491,0,0,1491,0,0,0,0,0
+merlin_cs,441,441,cc-by-sa-4.0,e7f84e7424,CC BY-SA 4.0,0,0,2,0,0,0,441,0,0,0,0,0
+merlin_de,1033,1033,cc-by-sa-4.0,65348beaa3,CC BY-SA 4.0,0,0,0,0,0,0,1033,0,0,0,0,0
+merlin_it,813,813,cc-by-sa-4.0,4779688dc6,CC BY-SA 4.0,0,0,7,0,0,0,813,0,0,0,0,0
+elg_cefr_de,509,509,cc-by-nc-4.0,5f6d8ba9b0,CC BY-NC-SA 4.0,0,0,0,0,509,0,509,0,0,0,0,0
+elg_cefr_en,712,706,cc-by-nc-4.0,5bcca03973,CC BY-NC-SA 4.0,114,0,0,0,712,0,712,0,0,0,132,0
+elg_cefr_nl,3596,1195,cc-by-nc-4.0,b2c4fed830,CC BY-NC-SA 4.0,1505,0,0,0,3596,0,3596,0,2401,0,0,0
+elle_et,1697,1696,cc-by-4.0,956e50d039,CC BY 4.0,0,0,0,0,0,0,1697,0,0,0,0,0
+icle500_en,495,495,cc-by-nc-4.0,4230a70c30,CC0 1.0 (Public Domain),204,0,7,0,495,0,495,0,0,0,0,0
+kwiqiz_fr,344,344,cc-by-nc-4.0,f7daf171b4,CC BY NC 4.0,0,0,0,0,0,0,344,0,0,0,0,0
+learn_welsh_cy,1372,1368,cc-by-nc-sa-4.0,3cdc672c60,public,0,0,0,0,0,1372,1372,0,0,0,0,0
+cefr_sp_en,10004,10003,cc-by-nc-sa-4.0,b78901348b,CC BY-NC-SA 4.0,0,0,0,0,0,0,10004,0,0,0,0,0
+cefr_asag_en,299,296,cc-by-nc-sa-4.0,5a64cc2fd5,CC BY-NC-SA 4.0,0,0,0,0,0,0,299,0,0,0,0,0
+cambridge_exams_en,331,325,cc-by-nc-sa-4.0,27cb64a28f,CC BY-NC-SA 4.0,0,0,0,0,0,0,331,0,0,0,132,0
+zaebuc_ar,215,215,cc-by-nc-sa-4.0,a51e514d01,CC BY-SA 4.0,0,0,6,0,215,0,215,0,0,0,0,0
